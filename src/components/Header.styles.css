@@ -1,13 +1,15 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
   align-items: center;
+  justify-items: center;
   padding: 2rem;
 }
 
 .navbar__title {
   font-family: 'Lobster', sans-serif;
   font-size: 3.4rem;
+  justify-self: left;
 }
 
 .navbar__title-name {
@@ -31,4 +33,11 @@
   font-size: 2rem;
   display: flex;
   gap: 2rem;
+}
+
+.option-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-self: right;
 }

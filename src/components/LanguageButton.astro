@@ -1,0 +1,13 @@
+---
+import './LanguageButton.style.css';
+
+const { currentLocale = 'en' } = Astro;
+
+const isEnglish = currentLocale === 'en';
+---
+
+<a class="link-lang" href={isEnglish ? '/es' : '/'}>
+  <span class={isEnglish ? 'bold' : ''}>EN</span>
+  /
+  <span class={!isEnglish ? 'bold' : ''}>ES</span>
+</a>

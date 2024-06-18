@@ -1,0 +1,11 @@
+.link-lang,
+.link-lang:link {
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 800;
+}

@@ -1,8 +1,4 @@
----
-
----
-
-<button id="toggle-button">
+<button id="toggle-dark-button">
   <svg width="24px" viewBox="0 0 24 24">
     <path
       class="sun"
@@ -18,22 +14,22 @@
 </button>
 
 <style>
-  #toggle-button {
+  #toggle-dark-button {
     border: 0;
     background: none;
     cursor: pointer;
   }
-  .sun {
+  .moon {
     fill: var(--color-text);
   }
-  .moon {
+  .sun {
     fill: transparent;
   }
 
-  :global(.dark) .sun {
+  :global(.dark) .moon {
     fill: transparent;
   }
-  :global(.dark) .moon {
+  :global(.dark) .sun {
     fill: var(--color-text);
   }
 </style>
@@ -60,10 +56,11 @@
   window.localStorage.setItem('theme', theme);
 
   const handleToggleClick = () => {
+    console.log('click');
     const element = document.documentElement;
-    element.classList.toggle("dark");    
+    element.classList.toggle('dark');
     const isDark = element.getAttribute('data-theme') === 'dark';
-    
+
     if (isDark) {
       element.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
@@ -72,8 +69,13 @@
       localStorage.setItem('theme', 'dark');
     }
   };
+  const init = () => {
+    document
+      .getElementById('toggle-dark-button')
+      .addEventListener('click', handleToggleClick);
+  };
 
-  document
-    .getElementById('toggle-button')
-    .addEventListener('click', handleToggleClick);
+  init();
+
+  document.addEventListener('astro:after-swap', init);
 </script>

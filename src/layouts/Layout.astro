@@ -1,32 +1,37 @@
 ---
 import Header from '../components/Header.astro';
 import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
-	title: string;
+  title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Alexis Checura's portfolio" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+<html lang={Astro.currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Lobster&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	</body>
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
 </html>

@@ -1,20 +1,35 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import { getI18n } from '../i18n';
 import DarkLightButton from './DarkLightButton.astro';
 import './Header.styles.css';
+import LanguageButton from './LanguageButton.astro';
+const { currentLocale = 'en' } = Astro;
+
+const i18n = getI18n({ currentLocale });
+
+const homeURL = getRelativeLocaleUrl(currentLocale);
+const experienceURL = getRelativeLocaleUrl(currentLocale, '#experience');
+const projectsURL = getRelativeLocaleUrl(currentLocale, '#projects');
+const aboutURL = getRelativeLocaleUrl(currentLocale, '#about');
 ---
 
 <header>
   <nav class="navbar">
     <div class="navbar__title">
-      <a class="navbar__link" href="/"
+      <a class="navbar__link" href={homeURL}
         ><span class="navbar__title-name">Alexis</span>Dev</a
       >
     </div>
     <div class="navbar__menu">
-      <a class="navbar__link" href="#projects">Projects</a>
-      <a class="navbar__link" href="#about">About</a>
-      <a class="navbar__link" href="#">Blog</a>
+      <a class="navbar__link" href={projectsURL}>{i18n.header.projects}</a>
+      <a class="navbar__link" href={experienceURL}>{i18n.header.experience}</a>
+      <a class="navbar__link" href={aboutURL}>{i18n.header.about}</a>
     </div>
-    <DarkLightButton />
+    <div class="option-buttons">
+      <LanguageButton />
+      <DarkLightButton />
+    </div>
   </nav>
 </header>

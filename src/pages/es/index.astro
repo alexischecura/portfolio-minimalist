@@ -1,12 +1,12 @@
 ---
-import { getI18n } from '../i18n';
-import Layout from '../layouts/Layout.astro';
+import { getI18n } from '../../i18n';
+import Layout from '../../layouts/Layout.astro';
 
 const i18n = getI18n({ currentLocale: Astro.currentLocale });
 ---
 
 <Layout title=`${i18n.title}` description={i18n.description}>
   <main class="main">
-    <h1>My portfolio</h1>
+    <h1>Mi portafolio</h1>
   </main>
 </Layout>
