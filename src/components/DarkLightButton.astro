@@ -56,7 +56,6 @@
   window.localStorage.setItem('theme', theme);
 
   const handleToggleClick = () => {
-    console.log('click');
     const element = document.documentElement;
     element.classList.toggle('dark');
     const isDark = element.getAttribute('data-theme') === 'dark';

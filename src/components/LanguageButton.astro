@@ -7,7 +7,7 @@ const isEnglish = currentLocale === 'en';
 ---
 
 <a class="link-lang" href={isEnglish ? '/es' : '/'}>
-  <span class={isEnglish ? 'bold' : ''}>EN</span>
+  <span class={isEnglish ? 'selected' : ''}>EN</span>
   /
-  <span class={!isEnglish ? 'bold' : ''}>ES</span>
+  <span class={!isEnglish ? 'selected' : ''}>ES</span>
 </a>

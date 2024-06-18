@@ -1,0 +1,55 @@
+.hero {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero__profile-picture {
+  outline: 3px var(--color-primary-600) solid;
+  border-radius: 100%;
+  height: 22rem;
+  transform: rotate(20deg);
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 4.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.hero__title-emoji {
+  font-size: 3.8rem;
+  vertical-align: text-top;
+}
+
+.hero__description {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.hero__description-flag {
+  height: 2.42rem;
+  margin: -4px 0;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero__description {
+    max-width: 50rem;
+  }
+}
+@media (max-width: 400px) {
+  .hero__title {
+    font-size: 3.4rem;
+    line-height: 3.8rem;
+  }
+  .hero__title-emoji {
+    font-size: 3.4rem;
+  }
+}

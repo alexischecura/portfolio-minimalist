@@ -5,5 +5,10 @@
     "about": "Sobre mí",
     "experience": "Experiencia"
   },
-  "description": "Portafolio personal de Alexis Checura"
+  "description": "Portafolio personal de Alexis Checura",
+  "hero": {
+    "greeting": "Hola",
+    "tobe": "Soy",
+    "description": "Desarrollador Frontend viviendo en Argentina <img class='hero__description-flag' src='/argentina-flag.png' alt='Argentina Flag'/> con experiencia usando <span class='text-highlight'>React</span> y <span class='text-highlight'>TypeScript</span>."
+  }
 }

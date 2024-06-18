@@ -1,0 +1,26 @@
+---
+import './Hero.styles.css';
+
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+import { getI18n } from '../i18n';
+const { currentLocale = 'en' } = Astro;
+
+const i18n = getI18n({ currentLocale });
+---
+
+<section class="hero">
+  <div>
+    <h1 class="hero__title">
+      {i18n.hero.greeting}
+      <span class="hero__title-emoji">👋</span>, <br />
+      {i18n.hero.tobe} <span class="hero__title-name text-highlight">Alexis Checura</span>
+    </h1>
+    <p class="hero__description" set:html={i18n.hero.description} />
+  </div>
+  <img
+    class="hero__profile-picture"
+    src="/alexis-checura.webp"
+    alt="Alexis Checura's profile picture"
+  />
+</section>

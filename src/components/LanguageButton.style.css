@@ -6,6 +6,7 @@
   text-decoration: none;
 }
 
-.bold {
+.selected {
   font-weight: 800;
+  color: var(--color-primary-600);
 }
