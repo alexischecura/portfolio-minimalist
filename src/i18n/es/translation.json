@@ -10,5 +10,18 @@
     "greeting": "Hola",
     "tobe": "Soy",
     "description": "Desarrollador Frontend viviendo en Argentina <img class='hero__description-flag' src='/argentina-flag.png' alt='Argentina Flag'/> con experiencia usando <span class='text-highlight'>React</span> y <span class='text-highlight'>TypeScript</span>."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "experience_1": {
+      "date": "Octubre 2023 - Actualidad",
+      "title": "TX2 Seguridad- Técnico en Sistemas de Seguridad",
+      "description": "En mi trabajo actual como Técnico en Sistemas de Seguridad implica la instalación y reparación de sistemas de alarma residenciales y cámaras de seguridad."
+    },
+    "experience_2": {
+      "date": "Noviembre 2017 - Agosto 2023",
+      "title": "Cuenta propia - Técnico Electricista",
+      "description": "Reparación e instalación de redes eléctricas domiciliarias e industriales, instalación de sistemas de seguridad, programación en PLC, reparación de computadoras."
+    }
   }
 }

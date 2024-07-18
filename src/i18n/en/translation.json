@@ -10,5 +10,18 @@
     "greeting": "Hi there",
     "tobe": "I'm",
     "description": "Frontend developer based in Argentina <img class='hero__description-flag' src='/argentina-flag.png' alt='Argentina Flag'/> with experience using <span class='text-highlight'>React</span> and <span class='text-highlight'>TypeScript</span>."
+  },
+  "experience": {
+    "title": "Experience",
+    "experience_1": {
+      "date": "October 2023 - Present",
+      "title": "TX2 Seguridad- Security Systems Technician",
+      "description": "In my current job as a Security Systems Technician involved installing and repairing of residential alarm system and security cameras."
+    },
+    "experience_2": {
+      "date": "November 2017 - August 2023",
+      "title": "Self-employed - Electrician Technician",
+      "description": "Installation and repairing home and industrial electrical circuits, ensuring compliance with safety codes, assembly of electrical panels, and PLC programming."
+    }
   }
 }
