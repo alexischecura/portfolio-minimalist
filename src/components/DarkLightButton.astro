@@ -35,27 +35,8 @@
 </style>
 
 <script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme');
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
-  })();
-
-  if (theme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    document.documentElement.classList.remove('dark');
-  }
-
-  window.localStorage.setItem('theme', theme);
-
   const handleToggleClick = () => {
+    console.log('theme');
     const element = document.documentElement;
     element.classList.toggle('dark');
     const isDark = element.getAttribute('data-theme') === 'dark';
@@ -69,12 +50,33 @@
     }
   };
   const init = () => {
+    const theme = (() => {
+      if (
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('theme')
+      ) {
+        return localStorage.getItem('theme');
+      }
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    })();
+
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
+    }
+
+    window.localStorage.setItem('theme', theme);
     document
       .getElementById('toggle-dark-button')
       .addEventListener('click', handleToggleClick);
   };
+  document.addEventListener('astro:after-swap', init);
 
   init();
-
-  document.addEventListener('astro:after-swap', init);
 </script>

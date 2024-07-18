@@ -2,11 +2,13 @@
 .link-lang:link {
   color: var(--color-text);
   font-family: inherit;
+  font-style: normal;
   font-size: 1.8rem;
   text-decoration: none;
 }
 
 .selected {
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 1.9rem;
   color: var(--color-primary-600);
 }
