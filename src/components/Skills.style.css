@@ -1,0 +1,30 @@
+.skills {
+  padding: 2rem;
+}
+
+.skills__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.skills__list li {
+  display: flex;
+}
+
+.skills__list li svg {
+  height: 6rem;
+  width: 6rem;
+  transition: transform 0.2s ease-in;
+}
+.skills__list li svg:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 550px) {
+  .skills__list {
+    grid-template-columns: repeat(4, 60px);
+  }
+}
