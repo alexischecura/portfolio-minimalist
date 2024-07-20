@@ -18,6 +18,11 @@
     border: 0;
     background: none;
     cursor: pointer;
+    transition: transform 0.3s ease-out
+  }
+
+  #toggle-dark-button:hover{
+    transform: scale(1.2);
   }
   .moon {
     fill: var(--color-text);
@@ -36,7 +41,6 @@
 
 <script is:inline>
   const handleToggleClick = () => {
-    console.log('theme');
     const element = document.documentElement;
     element.classList.toggle('dark');
     const isDark = element.getAttribute('data-theme') === 'dark';
@@ -49,7 +53,7 @@
       localStorage.setItem('theme', 'dark');
     }
   };
-  const init = () => {
+  const initDarkTheme = () => {
     const theme = (() => {
       if (
         typeof localStorage !== 'undefined' &&
@@ -76,7 +80,7 @@
       .getElementById('toggle-dark-button')
       .addEventListener('click', handleToggleClick);
   };
-  document.addEventListener('astro:after-swap', init);
+  document.addEventListener('astro:after-swap', initDarkTheme);
 
-  init();
+  initDarkTheme();
 </script>

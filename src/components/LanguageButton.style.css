@@ -1,10 +1,16 @@
 .link-lang,
-.link-lang:link {
+.link-lang:link,
+.link-lang:visited {
   color: var(--color-text);
   font-family: inherit;
   font-style: normal;
   font-size: 1.8rem;
   text-decoration: none;
+  transition: transform 0.3s ease-out
+}
+
+.link-lang:hover{
+  transform: scale(1.1);
 }
 
 .selected {
