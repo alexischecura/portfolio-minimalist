@@ -1,11 +1,9 @@
 ---
 import './Hero.styles.css';
 
-import { getRelativeLocaleUrl } from 'astro:i18n';
-
-import { getI18n } from '../i18n';
 const { currentLocale = 'en' } = Astro;
-
+import { getI18n } from '../i18n';
+import Icon from './Icon.astro';
 const i18n = getI18n({ currentLocale });
 ---
 
@@ -14,9 +12,44 @@ const i18n = getI18n({ currentLocale });
     <h1 class="hero__title">
       {i18n.hero.greeting}
       <span class="hero__title-emoji">👋</span>, <br />
-      {i18n.hero.tobe} <span class="hero__title-name text-highlight">Alexis Checura</span>
+      {i18n.hero.tobe}
+      <span class="hero__title-name text-highlight">Alexis Checura</span>
     </h1>
     <p class="hero__description" set:html={i18n.hero.description} />
+    <div class="social-links">
+      <a
+        href="https://www.linkedin.com/in/alexis-checura/"
+        class="social-link"
+        target="_blank"
+      >
+        <Icon icon="logo-linkedin" />
+        <span>Linkedin</span>
+      </a>
+      <a
+        href="https://github.com/alexischecura"
+        class="social-link"
+        target="_blank"
+      >
+        <Icon icon="logo-github" />
+        <span>Github</span>
+      </a>
+      <a
+        href="mailto:alexischecura@gmail.com"
+        class="social-link"
+        target="_blank"
+      >
+        <Icon icon="mail" />
+        <span>Email</span>
+      </a>
+      <a
+        href={i18n.hero.resume_link}
+        class="social-link"
+        target="_blank"
+      >
+        <Icon icon="document" />
+        <span>{i18n.hero.resume}</span>
+      </a>
+    </div>
   </div>
   <img
     class="hero__profile-picture"
