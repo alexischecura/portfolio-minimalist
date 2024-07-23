@@ -9,7 +9,7 @@
   "hero": {
     "greeting": "Hola",
     "tobe": "Soy",
-    "description": "Desarrollador Frontend viviendo en Argentina <img class='hero__description-flag' src='/img/argentina-flag.png' alt='Argentina Flag'/> con conocimiento en <span class='text-highlight'>React</span> y <span class='text-highlight'>TypeScript</span>.",
+    "description": "Desarrollador Web viviendo en Argentina <img class='hero__description-flag' src='/img/argentina-flag.png' alt='Argentina Flag'/> con conocimiento en <span class='text-highlight'>React</span>, <span class='text-highlight'>Node.js</span> y <span class='text-highlight'>TypeScript</span>.",
     "resume": "Curriculum",
     "resume_link": "https://alexischecura.ar/docs/alexis-checura-curriculum.pdf"
   },
