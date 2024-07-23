@@ -9,7 +9,9 @@
   "hero": {
     "greeting": "Hola",
     "tobe": "Soy",
-    "description": "Desarrollador Frontend viviendo en Argentina <img class='hero__description-flag' src='/argentina-flag.png' alt='Argentina Flag'/> con experiencia usando <span class='text-highlight'>React</span> y <span class='text-highlight'>TypeScript</span>."
+    "description": "Desarrollador Frontend viviendo en Argentina <img class='hero__description-flag' src='/argentina-flag.png' alt='Argentina Flag'/> con conocimiento en <span class='text-highlight'>React</span> y <span class='text-highlight'>TypeScript</span>.",
+    "resume": "Curriculum",
+    "resume_link": "https://alexischecura.ar/public/docs/alexis-checura-curriculum.pdf"
   },
   "experience": {
     "title": "Experiencia",
@@ -23,5 +25,35 @@
       "title": "Cuenta propia - Técnico Electricista",
       "description": "Reparación e instalación de redes eléctricas domiciliarias e industriales, instalación de sistemas de seguridad, programación en PLC, reparación de computadoras."
     }
+  },
+  "projects":{
+    "title": "Proyectos",
+    "fullstack":{
+      "project_1":{
+        "title": "Instaphoto",
+        "description": "Una aplicación web tipo Instagram completamente responsivo, desarrollado con <span class='text-highlight'>React</span> utilizando <span class='text-highlight'>Redux</span> para manejar el estado, estilizado con <span class='text-highlight'>Styled Components</span>, <span class='text-highlight'>Node.js</span> en el backend y <span class='text-highlight'>Postgresql</span> como base de datos."
+      }
+    },
+    "frontend":{
+      "project_1":{
+        "title": "Bankme.",
+        "description": "Una aplicación de banca digital el cual realize en una simulación laboral en No-Country, mi rol fue como desarrollador Frontend y Diseñador UX-UI, en esta aplicación utilizamos <span class='text-highlight'>React</span>, <span class='text-highlight'>TypeScript</span>, <span class='text-highlight'>Tailwind</span>."
+      }
+    },
+    "backend":{
+      "project_1":{
+        "title": "Backend de autenticación con Node.js y PostgreSQL",
+        "description": "Aplicación de autenticación y autorización backend utilizando <span class='text-highlight'>Node.js</span>, <span class='text-highlight'>Express</span>, <span class='text-highlight'>Prisma</span>, <span class='text-highlight'>Zod</span>, <span class='text-highlight'>PostgreSQL</span> y <span class='text-highlight'>Redis</span> para la gestión de datos."
+      },
+      "project_2":{
+        "title": "Backend de autenticación con Node.js y MongoDB",
+        "description": "Aplicación de autenticación y autorización backend utilizando <span class='text-highlight'>Node.js</span>, <span class='text-highlight'>Express</span>, <span class='text-highlight'>Zod</span> y <span class='text-highlight'>Typegoose</span>. <span class='text-highlight'>MongoDB</span> y <span class='text-highlight'>Redis</span> para gestión de datos. Fácil configuración de base de datos con <span class='text-highlight'>Docker</span>."
+      }
+    }
+  },
+  "about":{
+    "title": "Sobre mí",
+    "description_1": "Actualmente estoy estudiando la carrera de Técnico en Desarrollo Web. Aunque no tengo experiencia formal como desarrollador de software, he trabajado en equipos fuera del área de IT dedicados a proveer soluciones técnicas de calidad.",
+    "description_2": "He participado en simulaciones laborales en No-Country y me he especializado por cuenta propia en varias tecnologías. Estoy dispuesto a trabajar tanto en frontend como en backend, y siempre estoy abierto a aprender nuevas tecnologías y métodos de desarrollo."
   }
 }
