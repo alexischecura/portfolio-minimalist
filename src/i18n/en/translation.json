@@ -9,7 +9,7 @@
   "hero": {
     "greeting": "Hi there",
     "tobe": "I'm",
-    "description": "Software Web Developer based in Argentina <img class='hero__description-flag' src='/img/argentina-flag.png' alt='Argentina Flag'/> with knowledge in <span class='text-highlight'>React</span> and <span class='text-highlight'>TypeScript</span>.",
+    "description": "Software Web Developer based in Argentina <img class='hero__description-flag' src='/img/argentina-flag.png' alt='Argentina Flag'/> with knowledge in <span class='text-highlight'>React</span>, <span class='text-highlight'>Node.js</span> and <span class='text-highlight'>TypeScript</span>.",
     "resume": "Resume",
     "resume_link": "https://alexischecura.ar/docs/alexis-checura-resume.pdf"
   },
