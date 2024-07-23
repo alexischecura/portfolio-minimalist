@@ -1,0 +1,113 @@
+---
+import './Projects.styles.css';
+import Icon from './Icon.astro';
+
+const { currentLocale = 'en' } = Astro;
+import { getI18n } from '../i18n';
+const i18n = getI18n({ currentLocale });
+---
+
+<section class="section-projects">
+  <h2 class="section-title">{i18n.projects.title}</h2>
+  <div class="projects">
+    <div class="project">
+      <div class="project-image__container">
+        <img
+          class="project-image image-animation"
+          src="./instagram-clone.jpg"
+          alt="Instagram clone's home page"
+        />
+      </div>
+      <div class="description">
+        <h3 class="project-title">
+          {i18n.projects.fullstack.project_1.title}
+        </h3>
+        <p
+          class="text-description"
+          set:html={i18n.projects.fullstack.project_1.description}
+        />
+        <div class="links">
+          <a
+            href="https://github.com/alexischecura/instaphoto"
+            class="project-link"
+            target="_blank"
+          >
+            <Icon icon="logo-github" />
+            <span> Github </span>
+          </a>
+          <a
+            href="https://instaphoto-alexischecura.vercel.app/"
+            class="project-link"
+            target="_blank"
+          >
+            <Icon icon="rocket" />
+            <span> Live </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-image__container">
+        <img
+          class="project-image image-animation"
+          src="./bankme.jpg"
+          alt="Instagram clone's home page"
+        />
+      </div>
+      <div class="description">
+        <h3 class="project-title">
+          {i18n.projects.frontend.project_1.title}
+        </h3>
+        <p
+          class="text-description"
+          set:html={i18n.projects.frontend.project_1.description}
+        />
+        <div class="links">
+          <a
+            href="https://bankme-nc.netlify.app/"
+            class="project-link"
+            target="_blank"
+          >
+            <Icon icon="rocket" />
+            <span> Live </span>
+          </a>
+          <a
+            href="https://www.figma.com/design/HOyFQvD8d68nAtCb49ehPr/c17-126-n-typescript---Banca-Digital?node-id=227-6845&t=Qpo5YHD7eVHToldy-1"
+            class="project-link"
+            target="_blank"
+          >
+            <Icon icon="logo-figma" />
+            <span> Figma </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-image__container">
+        <img
+          class="project-image"
+          src="./auth-node-postgresql.webp"
+          alt="Node.js, TypeScript, Postgresql and Prisma logos"
+        />
+      </div>
+      <div class="description">
+        <h3 class="project-title">{i18n.projects.backend.project_1.title}</h3>
+
+        <p
+          class="text-description"
+          set:html={i18n.projects.backend.project_1.description}
+        />
+        <div class="links">
+          <a
+            href="https://github.com/alexischecura/auth-prisma-postgresql-ts"
+            class="project-link"
+            target="_blank"
+          >
+            <Icon icon="logo-github" />
+            <span> Github </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
