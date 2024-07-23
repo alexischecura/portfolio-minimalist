@@ -1,0 +1,19 @@
+---
+import './About.style.css';
+
+const { currentLocale = 'en' } = Astro;
+import { getI18n } from '../i18n';
+const i18n = getI18n({ currentLocale });
+---
+
+<section class="about">
+  <h2 class="section-title">{i18n.about.title}</h2>
+  <div>
+    <p class="about-text">
+      {i18n.about.description_1}
+    </p>
+    <p class="about-text">
+      {i18n.about.description_2}
+    </p>
+  </div>
+</section>
