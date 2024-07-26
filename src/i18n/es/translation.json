@@ -51,6 +51,9 @@
       }
     }
   },
+  "skills":{
+    "title":"Habilidades"
+  },
   "about":{
     "title": "Sobre mí",
     "description_1": "Actualmente estoy estudiando la carrera de Técnico en Desarrollo Web. Aunque no tengo experiencia formal como desarrollador de software, he trabajado en equipos fuera del área de IT dedicados a proveer soluciones técnicas de calidad.",
